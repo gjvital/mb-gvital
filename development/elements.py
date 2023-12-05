@@ -18,7 +18,7 @@ class values():
 class elements():
 
     # cookies
-    cookies_confirmation_button = "[data-test-id=\"handle-accept-all-button\"]"
+    cookies_confirmation_button = '[data-test-id=\"handle-accept-all-button\"]' 
     
     #Portal Code
     postal_code_field = "[data-test-id=\"modal-popup__location\"]"
@@ -34,4 +34,3 @@ class elements():
     postal_code_enquire_form = "Postal Code"
     comment_field = "Comments (optional)"
     enquire_confirmation_send_button = "[data-test-id=\"dcp-rfq-contact-button-container__button-next\"]"
-    

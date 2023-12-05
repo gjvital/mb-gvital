@@ -11,10 +11,11 @@ def test_validate_error_message(playwright:Playwright):
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
-    page.set_default_navigation_timeout(100000)
+    page.set_default_navigation_timeout(300000)
     page.goto(url)
 
     #test starts
+    sleep(5)
     accept_cookies(page)
     fill_location_form(page)
     
@@ -27,7 +28,6 @@ def test_validate_error_message(playwright:Playwright):
 
     #select options inside the filter
     page.locator(elements.filter_button).click()
-    sleep(2)
     page.locator("div").filter(has_text=re.compile(r"^Colour$")).click()
     page.get_by_text("Colour 0").click()
     page.locator(elements.choose_color_dropdown).get_by_text(values.choose_color_dropdown_value).click()
@@ -35,7 +35,6 @@ def test_validate_error_message(playwright:Playwright):
     #sort by price high to low and go to highest price car
     page.get_by_label("Sorting").select_option("price-desc-ucos")
     page.locator("a").filter(has_text="Explore").first.click()
-    sleep(2)
 
     # Find the element containing the VIN number
     vin_element = page.query_selector('li[data-test-id="dcp-vehicle-details-list-item-11"] .dcp-vehicle-details-list-item__value')
