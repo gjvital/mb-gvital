@@ -14,5 +14,5 @@ How to run a test
 		(i.e. pytest .\validate_error_message_test.py --html=report.html)
         
 If you are running from local env please check the path and updated according to your local machine
-i.e. C:\\Users\\user_name\\OneDrive\\Documents\\MB-project\\development\\
+i.e. C:\\Users\\user_name\\Documents\\MB-project\\development\\
 """

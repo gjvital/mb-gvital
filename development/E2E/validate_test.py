@@ -2,7 +2,7 @@ from playwright.sync_api import Page, expect
 import re
 from playwright.sync_api import Playwright, sync_playwright, expect
 import sys
-sys.path.append("C:\\Users\\rayan\\OneDrive\\Documentos\\MB-project\\development\\") #update to your local pathco
+sys.path.append("C:\\Users\\user_name\\Documents\\MB-project\\development\\") #update to your local pathco
 from elements import *
 from assertsByGroups import * 
 
